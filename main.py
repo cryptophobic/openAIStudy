@@ -1,30 +1,19 @@
-import os
-from openai import OpenAI
-from config import OPENAI_API_KEY
+from OpenAIChat import OpenAIChat
+from OpenAIImages import OpenAIImages
+from OpenAIClient import OpenAIClient
 
-os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
+client = OpenAIClient()
 
-client = OpenAI()
-# for model in client.models.list():
-#     print(model)
+def execute_chat():
+    chat = OpenAIChat(client.client)
 
-system_role_content = ('You are helpful assistance')
+    chat.execute_chat_completion('Tell me about Johann Sebastian Bach')
+    print(chat.get_last_response())
 
-response = client.chat.completions.create(
-    model='gpt-3.5-turbo',
-    messages=[
-        {'role': 'system', 'content': system_role_content},
-        {'role': 'user', 'content': 'Write a short article about Norse Mythology gods'},
-    ],
-    temperature=1,
-    # seed=1234
-    # top_p=0.1,
-    # max_tokens=10,
-    # n=2,
-    # stop=[';', '.'],
-    frequency_penalty=0,  # between -2 and 2, default 0
-    presence_penalty=0,  # between -2 and 2, default 0
+def execute_image():
+    image = OpenAIImages(client.client)
+    image.execute_image_generating(' unicorns')
+    print(image.get_last_response())
 
-)
 
-print(response.choices[0].message.content)
+execute_image()
