@@ -1,4 +1,5 @@
 .idea
 .venv
 .env
+.DS_store
 __pycache__
