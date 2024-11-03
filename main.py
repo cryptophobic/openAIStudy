@@ -1,6 +1,7 @@
 from OpenAIChat import OpenAIChat
 from OpenAIImages import OpenAIImages
 from OpenAIClient import OpenAIClient
+from OpenAITextToSpeech import OpenAITextToSpeech
 
 client = OpenAIClient()
 
@@ -22,5 +23,9 @@ def execute_image_variations():
     print(image.get_last_response())
     image.save_last_response('me_variation_variation_variation.png')
 
+def execute_text_to_speech():
+    tts = OpenAITextToSpeech(client.client)
+    tts.execute_text_to_speech('Привіт?')
 
-execute_image()
+if __name__ == "__main__":
+    execute_text_to_speech()
