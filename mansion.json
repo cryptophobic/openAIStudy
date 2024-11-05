@@ -1,0 +1,114 @@
+{
+  "Kitchen": {
+    "doors": [
+      "Dining Room"
+    ],
+    "area": {
+      "width": 4,
+      "length": 3
+    },
+    "look": "A modern kitchen with sleek white cabinets, black granite countertops, and stainless steel appliances. The room is bright with a large window above the sink.",
+    "features": [
+      "sink",
+      "stove",
+      "fridge",
+      "window"
+    ]
+  },
+  "Dining Room": {
+    "doors": [
+      "Living Room",
+      "Kitchen"
+    ],
+    "area": {
+      "width": 6,
+      "length": 4
+    },
+    "look": "An open dining area with a long wooden table and six chairs. A large window lets in natural light, and a chandelier hangs above the table.",
+    "features": [
+      "window",
+      "chandelier"
+    ]
+  },
+  "Living Room": {
+    "doors": [
+      "Dining Room",
+      "Hallway"
+    ],
+    "area": {
+      "width": 5,
+      "length": 5
+    },
+    "look": "A cozy living room with a fireplace and comfortable sofas arranged around a coffee table. The room has a large window and a door leading outside.",
+    "features": [
+      "window",
+      "fireplace",
+      "entrance_door"
+    ]
+  },
+  "Master Bedroom": {
+    "doors": [
+      "Hallway",
+      "Bathroom"
+    ],
+    "area": {
+      "width": 5,
+      "length": 4
+    },
+    "look": "A spacious bedroom with a king-sized bed, a walk-in closet, and soft lighting. The room has calming blue walls and a large window with a view of the garden.",
+    "features": [
+      "bed",
+      "closet",
+      "window"
+    ]
+  },
+  "Bathroom": {
+    "doors": [
+      "Master Bedroom",
+      "Hallway"
+    ],
+    "area": {
+      "width": 3,
+      "length": 2
+    },
+    "look": "A small but functional bathroom with a shower, sink, and toilet. Light-colored tiles make the space feel larger, and there's a frosted glass window for privacy.",
+    "features": [
+      "sink",
+      "toilet",
+      "shower",
+      "window"
+    ]
+  },
+  "Guest Bedroom": {
+    "doors": [
+      "Hallway"
+    ],
+    "area": {
+      "width": 4,
+      "length": 3
+    },
+    "look": "A simple guest bedroom with a queen-sized bed, a small closet, and a window. The decor is neutral, with a few wall art pieces and a bedside table.",
+    "features": [
+      "bed",
+      "closet",
+      "window"
+    ]
+  },
+  "Hallway": {
+    "doors": [
+      "Living Room",
+      "Master Bedroom",
+      "Bathroom",
+      "Guest Bedroom"
+    ],
+    "area": {
+      "width": 2,
+      "length": 5
+    },
+    "look": "A narrow hallway connecting the bedrooms and living spaces. The walls are painted in a light shade, and there's a small table with a lamp for decoration.",
+    "features": [
+      "connecting_rooms",
+      "lighting"
+    ]
+  }
+}

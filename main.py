@@ -17,7 +17,8 @@ def execute_image():
     #        Draw an isometric plan of kitchen in ISO 1046:1973.
 
     image.execute_image_generating('''
-        Draw an isometric plan of kitchen in ISO 1046:1973. 
+        Draw Top down plan of a modern kitchen with sleek white cabinets, 
+        black granite countertops, and stainless steel appliances. The room is bright with a large window above the sink.. 
         Top-left conner of the room must bew in the top-left conner of image.
         Top-right conner of the room must bew in the top-right conner of image.
         Bottom-left conner of the room must bew in the bottom-left conner of image.
@@ -34,7 +35,7 @@ def execute_image_variations():
 
 def execute_image_edit():
     image = OpenAIImages(client.client)
-    image.execute_image_editing('Mitko.png', 'Mitko_mask.png', 'Photo of the happy ginger-bearded  man')
+    image.execute_image_editing('kitchen.png', 'kitchen_mask.png', 'Top down plan of a modern kitchen with sleek white cabinets, black granite countertops, and stainless steel appliances. The room is bright with a large window above the sink.')
     print(image.get_last_response())
     image.save_last_response()
 
@@ -43,4 +44,4 @@ def execute_text_to_speech():
     tts.execute_text_to_speech('Привіт?')
 
 if __name__ == "__main__":
-    execute_image_variations()
+    execute_image_edit()
